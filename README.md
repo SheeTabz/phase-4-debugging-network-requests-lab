@@ -62,12 +62,12 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - The POST action had a undefined value 'Toys inside the ToysController. The right value/constant name is Toy as from the toy model.So I adjusted the name and the create action worked
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - I used byebug and console to check for the error message and debug. The issue was that the likes were'not  updating/incrementing the number. So I decided after getting the toy by its id I should access the key of likes toy[:likes] and increment by one each time it is updated. Then set the value to the newly updated value. I also set the 
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - I carried out the delete fetch request but it didn't work. So I opened the console in the browser and navigates to the network section for a more detailed error message. The destroy action defined in the ActionController didn't have its corresponding destroy action defined in routes.rb. So I went to the routes file and defined the destroy action in the resources
